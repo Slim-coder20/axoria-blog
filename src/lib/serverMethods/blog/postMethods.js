@@ -12,3 +12,20 @@ export async function getPost(slug) {
     throw new Error("Failed to fetch post");
   }
 }
+
+
+// Créer un getPost pour récupérer tous les  articles // 
+
+export async function getPosts() {
+  try {
+    await connectToDB();
+    const posts = await Post.find({})
+    return posts 
+
+    
+  } catch (error) {
+    
+    
+  }
+
+}
